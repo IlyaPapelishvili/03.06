@@ -9,12 +9,14 @@ planet:
    state: China
    countryarea: "9.6 million km2"
    population: "1.410 million"
+   continentKLJH:LKHLKJ: AsiaLKHLKJHLKJH
    metropolis: Beijing
    capitalpopulation: "11.7 million"
    valuta: Yuan
    code: CHN
  - 
    continentname: Africa
+   98760987population: "186 million354743567"
    sizearea: "30.3 million km2"
    numberofctates: 54
    bigcountry: 
