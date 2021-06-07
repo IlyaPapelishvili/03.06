@@ -13,7 +13,7 @@ msgid_plural "%s days"
 #: sphinx/application.py:166
 #, python-format
 msgid "Output directory (%s) is not a directory"
-msgstr ""
+msgstr "gfhsfgjdfgjdfgj"
 
 #: sphinx/application.py:170
 msgid "Source directory and destination directory cannot be identical"
