@@ -35,13 +35,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<!--
-This file is imported from https://github.com/ampproject/amphtml/blob/master/extensions/amp-a4a/amp-a4a-format.md.
-Please do not change this file.
-If you have found a bug or an issue please
-have a look and request a pull request there.
--->
-
 
 _If you'd like to propose changes to the standard, please comment on the [Intent
 to Implement](https://github.com/ampproject/amphtml/issues/4264)_.
@@ -61,6 +54,10 @@ Unless otherwise specified below, the creative must obey all rules given by the
 included here by reference. For example, the AMPHTML ad [Boilerplate](#boilerplate) deviates from the AMP standard boilerplate.
 
 In addition, creatives must obey the following rules:
+
+Unless otherwise specified below, the creative must obey all rules given by the
+[AMP format rules](https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml.html),
+included here by reference. For example, the AMPHTML ad [Boilerplate](#boilerplate) deviates from the AMP standard boilerplate.
 
 <table>
 <thead>
