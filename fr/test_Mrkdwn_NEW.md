@@ -9,6 +9,13 @@ Jupyter Notebook Markdown is an extension of a flavour of Markdown called
 It has many elements for standard text processing, though it lacks a lot of features used for
 publishing and documentation.
 
+You can write content in regular Markdown files (e.g., files ending in `.md`).
+Jupyter Book supports any Markdown syntax that is supported by Jupyter notebooks.
+Jupyter Notebook Markdown is an extension of a flavour of Markdown called
+[CommonMark Markdown](https://commonmark.org/).
+It has many elements for standard text processing, though it lacks a lot of features used for
+publishing and documentation.
+
 ```{note}
 If you'd like a more in-depth overview and guide to CommonMark Markdown, see
 [the CommonMark Markdown tutorial](https://commonmark.org/help/tutorial/).
