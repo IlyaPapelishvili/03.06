@@ -6,7 +6,10 @@ formats:
 teaser:
   text: |2-
 
+
+
     _Si desea proponer cambios a la norma, comente el
+
     [Intención
 toc: cierto
 ---
@@ -61,23 +64,19 @@ Además, las creatividades deben cumplir las siguientes reglas:
 <td>Permite comportamientos de tiempo de ejecución personalizados para anuncios HTML de AMP que se muestran en iframes de origen cruzado.</td>
 </tr>
 <tr>
-<td>No debe incluir una etiqueta <code>&lt;link rel="canonical"&gt;</code>
-</td>
+<td>No debe incluir una etiqueta <code>&lt;link rel="canonical"&gt;</code> </td>
 <td>Las creatividades de anuncios no tienen una "versión canónica que no sea de AMP" y no se indexarán en búsquedas de forma independiente, por lo que la autorreferencia sería inútil.</td>
 </tr>
 <tr>
 <td>Puede incluir metaetiquetas opcionales en el encabezado HTML como identificadores, en el formato de <code>&lt;meta name="amp4ads-id" content="vendor=${vendor},type=${type},id=${id}"&gt;</code> . Esas metaetiquetas deben colocarse antes del <code>amp4ads-v0.js</code> . El valor de <code>vendor</code> y <code>id</code> son cadenas que contienen solo [0-9a-zA-Z_-]. El valor de <code>type</code> es <code>creative-id</code> o <code>impression-id</code> .</td>
-<td>Those custom identifiers can be used to identify the impression or the creative. They can be helpful for reporting and debugging.<br><br><p>Example:</p>
-<pre>
+<td>Those custom identifiers can be used to identify the impression or the creative. They can be helpful for reporting and debugging.<br><br><p>Example:</p> <pre>
 &lt;meta name="amp4ads-id"
   content="vendor=adsense,type=creative-id,id=1283474"&gt;
 &lt;meta name="amp4ads-id"
-  content="vendor=adsense,type=impression-id,id=xIsjdf921S"&gt;</pre>
-</td>
+  content="vendor=adsense,type=impression-id,id=xIsjdf921S"&gt;</pre> </td>
 </tr>
 <tr>
-<td>
-<code>&lt;amp-analytics&gt;</code> solo puede orientar el selector de anuncios completo, a través de <code>"visibilitySpec": { "selector": "amp-ad" }</code> como se define en el <a href="https://github.com/ampproject/amphtml/issues/4018">número 4018</a> y el <a href="https://github.com/ampproject/amphtml/pull/4368">PR nº 4368</a> . En particular, no puede orientar a ningún selector de elementos dentro de la creatividad del anuncio.</td>
+<td> <code>&lt;amp-analytics&gt;</code> solo puede orientar el selector de anuncios completo, a través de <code>"visibilitySpec": { "selector": "amp-ad" }</code> como se define en el <a href="https://github.com/ampproject/amphtml/issues/4018">número 4018</a> y el <a href="https://github.com/ampproject/amphtml/pull/4368">PR nº 4368</a> . En particular, no puede orientar a ningún selector de elementos dentro de la creatividad del anuncio.</td>
 <td>In some cases, AMPHTML ads may choose to render an ad creative in an iframe.In those cases, host page analytics can only target the entire iframe anyway, and won’t have access to any finer-grained selectors.<br><br> <p>Example:</p> <pre>
 &lt;amp-analytics id="nestedAnalytics"&gt;
   &lt;script type="application/json"&gt;
@@ -95,8 +94,7 @@ Además, las creatividades deben cumplir las siguientes reglas:
   }
   &lt;/script&gt;
 &lt;/amp-analytics&gt;
-</pre> <p>This configuration sends a request to the <code>https://example.com/nestedAmpAnalytics</code> URL when 50% of the enclosing ad has been continuously visible on the screen for 1 second.</p>
-</td>
+</pre> <p>This configuration sends a request to the <code>https://example.com/nestedAmpAnalytics</code> URL when 50% of the enclosing ad has been continuously visible on the screen for 1 second.</p> </td>
 </tr>
 </tbody>
 </table>
@@ -128,14 +126,11 @@ Tenga en cuenta que se aplican las mismas reglas sobre mutaciones en el texto es
 </tr></thead>
 <tbody>
   <tr>
-    <td>
-<code>position:fixed</code> y <code>position:sticky</code> están prohibidos en CSS creativo.</td>
-    <td>
-<code>position:fixed</code> rupturas del DOM en la sombra, del que dependen los anuncios HTML de AMP. Además, los anuncios en AMP ya no pueden usar una posición fija.</td>
+    <td> <code>position:fixed</code> y <code>position:sticky</code> están prohibidos en CSS creativo.</td>
+    <td> <code>position:fixed</code> rupturas del DOM en la sombra, del que dependen los anuncios HTML de AMP. Además, los anuncios en AMP ya no pueden usar una posición fija.</td>
   </tr>
   <tr>
-    <td>
-<code>touch-action</code> está prohibida.</td>
+    <td> <code>touch-action</code> está prohibida.</td>
     <td>Un anuncio que puede manipular <code>touch-action</code> puede interferir con la capacidad del usuario para desplazarse por el documento anfitrión.</td>
   </tr>
   <tr>
@@ -148,8 +143,7 @@ Tenga en cuenta que se aplican las mismas reglas sobre mutaciones en el texto es
   </tr>
   <tr>
     <td>Los prefijos específicos del proveedor se consideran alias del mismo símbolo sin el prefijo para fines de validación. Esto significa que si un símbolo <code>foo</code> está prohibido por las reglas de validación de CSS, entonces el símbolo <code>-vendor-foo</code> también estará prohibido.</td>
-    <td>Algunas propiedades con prefijo de proveedor proporcionan una funcionalidad equivalente a las propiedades que de otro modo están prohibidas o restringidas por estas reglas.<br><br><p> Ejemplo: <code>-webkit-transition</code> y <code>-moz-transition</code> se consideran alias para la <code>transition</code> . Solo se permitirán en contextos donde <code>transition</code> simple (consulte la <a href="#selectors">sección Selectores a</a> continuación).</p>
-</td>
+    <td>Algunas propiedades con prefijo de proveedor proporcionan una funcionalidad equivalente a las propiedades que de otro modo están prohibidas o restringidas por estas reglas.<br><br><p> Ejemplo: <code>-webkit-transition</code> y <code>-moz-transition</code> se consideran alias para la <code>transition</code> . Solo se permitirán en contextos donde <code>transition</code> simple (consulte la <a href="#selectors">sección Selectores a</a> continuación).</p> </td>
   </tr>
 </tbody>
 </table>
@@ -321,7 +315,7 @@ La mayoría de las omisiones se deben al rendimiento o a que las etiquetas no so
 
 Las etiquetas SVG no están en el espacio de nombres HTML5. Se enumeran a continuación sin los identificadores de sección.
 
-`&lt;svg&gt;``&lt;g&gt;``&lt;ruta&gt;``&lt;glifo&gt;``&lt;gliforef&gt;``&lt;marcador&gt;``&lt;vista&gt;``&lt;circulo&gt;``&lt;línea&gt;``&lt;polígono&gt;``&lt;polilínea&gt;``&lt;recto&gt;``&lt;texto&gt;``&lt;textpath&gt;``&lt;tref&gt;``&lt;tspan&gt;``&lt;clippath&gt;``&lt;filtro&gt;``&lt;gradiente lineal&gt;``&lt;radialgradient&gt;``&lt;mascara&gt;``&lt;patrón&gt;``&lt;vkern&gt;``&lt;hkern&gt;``&lt;defs&gt;``&lt;use&gt;``&lt;símbolo&gt;``&lt;desc&gt;``&lt;título&gt;`
+`<svg>``<g>``<path>``<glyph>``<glyphref>``<marker>``<view>``<circle>``<line>``<polygon>``<polyline>``<rect>``<text>``<textpath>``<tref>``<tspan>``<clippath>``<filter>``<lineargradient>``<radialgradient>``<mask>``<pattern>``<vkern>``<hkern>``<defs>``<use>``<symbol>``<desc>``<title>`
 
 #### 4.9 Datos tabulares<a name="49-tabular-data"></a>
 
